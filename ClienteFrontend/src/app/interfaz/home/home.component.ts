@@ -19,6 +19,19 @@ export class HomeComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
+    // this.preCanvas();
+  }
+
+  preCanvas():void {
+    let canvas = document.getElementById('imagenHome') as
+    HTMLCanvasElement;
+    let ctx = canvas.getContext("2d");
+    var img = new Image();
+    img.src = './assets/fondoHome.jpg';
+      // ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    img.onload = function(){
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    }
   }
 
 }
