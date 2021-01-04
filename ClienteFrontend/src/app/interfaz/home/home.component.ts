@@ -9,6 +9,8 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  provincias = ['San José', 'Cartago','Alajuela', 'Heredia', 'Puntarenas', 'Guanacaste', 'Limón'];
+  provincia: string;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
   .pipe(
