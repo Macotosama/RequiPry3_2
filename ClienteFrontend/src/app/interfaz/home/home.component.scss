@@ -32,6 +32,7 @@
     position: absolute;
     left: 15%;
     font-size: 3em;
+    font-family: Brush Script MT;
   }
 
   .telefono {
@@ -104,4 +105,18 @@
   position: absolute;
   top: 37%;
   left: 45%;
+}
+
+.infoHoteles {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.infoHotel {
+  box-shadow: 2px 2px 5px #999;
+  width: 70%;
+  height: 20em;
 }

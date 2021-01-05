@@ -1,0 +1,70 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 200px;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .maintoolbar {
+    color: #23CF20;
+    // background-color: rgba(30, 55, 199, 0.801);
+    height: 10%;
+  }
+  
+  .iconMenu {
+    cursor: pointer;
+    color: #23CF20;
+    font-size: 4em;
+  }
+  
+  .titulo {
+    position: absolute;
+    left: 15%;
+    font-size: 3em;
+    font-family: Brush Script MT;
+  }
+
+  .telefono {
+    color: black;
+    font-size: 0.7em;
+  }
+
+  .info1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    position: absolute;
+    left: 80%;
+    top: 1%;
+  }
+
+  .info2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    position: absolute;
+    left: 79%;
+    top: 6%;
+  }
+
+  .direccion {
+    color: black;
+  }
+
+  .Reservaciones {
+    background-color: #23CF20;
+    color: white;
+    font-size: 1em;
+    font-family: Roboto;
+  }
