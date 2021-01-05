@@ -4,19 +4,23 @@
         [mode]="(isHandset$ | async) ? 'side' : 'over'"
         [opened]="(isHandset$ | async) === true">
       <mat-toolbar>Menu</mat-toolbar>
-      <mat-nav-list>
+      <mat-nav-list *ngIf="sesion == 's'">
         <!-- <a mat-list-item [routerLink]="['/hoteles']">Hoteles</a>
         <a mat-list-item [routerLink]="['/aventuras']">Aventuras</a>
         <a mat-list-item [routerLink]="['/habitaciones']">Habitaciones</a>
         <a mat-list-item [routerLink]="['/reservaciones']">Reservaciones</a>
         <a mat-list-item [routerLink]="['/clientes']">Clientes</a> -->
-        <a mat-list-item href="#">Cerrar sesión</a>
+        <a mat-list-item (click)="cerrarSesion()">Cerrar sesión</a>
+      </mat-nav-list>
+      <mat-nav-list *ngIf="sesion == 'n'">
+        <a mat-list-item (click)="inicarSesion()">Iniciar sesión</a>
+        <a mat-list-item href="#">Crear cuenta</a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
       <mat-toolbar class="maintoolbar">
         <menu (click)="drawer.toggle()"><mat-icon class="iconMenu">menu</mat-icon></menu>
-        <span class="titulo">Caribbean Adventure</span>
+        <span class="titulo" [routerLink]="['/home']">Caribbean Adventure</span>
         <div class="info1">
           <a class="telefono">Reservaciones: 88888888</a>
           <button mat-flat-button class="Reservaciones">Reservar</button>
@@ -53,9 +57,39 @@
 
         <div class="infoHoteles">
           <div class="infoHotel">
-
+            <mat-grid-list cols="4" rowHeight="100px">
+              <mat-grid-tile
+                  *ngFor="let tile of tiles"
+                  [colspan]="tile.cols"
+                  [rowspan]="tile.rows"
+                  [style.background]="tile.color">
+                {{tile.text}}
+              </mat-grid-tile>
+            </mat-grid-list>
           </div>
         </div>
+
+        <!-- <div class="infoHoteles">
+        <mat-grid-list cols="4" rowHeight="100px">
+          <mat-grid-tile
+              *ngFor="let tile of tiles"
+              [colspan]="tile.cols"
+              [rowspan]="tile.rows"
+              [style.background]="tile.color">
+            {{tile.text}}
+          </mat-grid-tile>
+          </mat-grid-list>
+        </div> -->
+
+
+        <!-- <div class="infoHoteles">
+          <div class="infoHotel">
+            <div class="nombreHotel">
+
+            </div>
+            div
+          </div>
+        </div> -->
 
       <!-- <canvas id="imagenHome"></canvas> -->
     </mat-sidenav-content>
