@@ -3,6 +3,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { Router } from "@angular/router";
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { RegisterComponent } from "./register/register.component";
 
 export interface Tile {
   color: string;
@@ -34,7 +36,7 @@ export class HomeComponent implements OnInit {
     {text: 'Four', cols: 2, rows: 3, color: '#DDBDF1'},
   ];
 
-  constructor(private breakpointObserver: BreakpointObserver, private _router: Router) { }
+  constructor(private breakpointObserver: BreakpointObserver, private _router: Router, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.sesion = localStorage.getItem('sesion');
@@ -51,4 +53,10 @@ export class HomeComponent implements OnInit {
     // this._router.navigate(['/home']);
     location.reload();
   }
+
+  registrar():void {
+    const dialogRef = this.dialog.open(RegisterComponent, {
+    width: '1000px', height: '650px'
+  })
+}
 }

@@ -1,0 +1,33 @@
+.maincontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 1em;
+}
+
+.buttonLogin
+{
+  color: white;
+  background-color: #6550C5;
+  width: 10em;
+  height: 3em;
+  border-radius: 30px;
+}
+
+.form {
+    width: 250px;
+}
+
+.tittlecontainer {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 1em;
+}
+
+span {
+    font-size: 2em;
+}
