@@ -5,7 +5,7 @@
     <div>
             
         <form>
-            <mat-form-field class="form">
+            <mat-form-field class="form" appearance="outline">
                 <mat-label>Nombre</mat-label>
                 <input matInput [formControl]="nombre" placeholder="Ex. Myname">
                 <mat-error *ngIf="nombre.hasError('pattern') && !nombre.hasError('required')">
@@ -21,7 +21,7 @@
         </form>
 
         <form>
-            <mat-form-field class="form">
+            <mat-form-field class="form" appearance="outline">
                 <mat-label>Apellido 1</mat-label>
                 <input matInput [formControl]="apellido1" placeholder="Ex. Mylastname">
                 <mat-error *ngIf="apellido1.hasError('pattern') && !apellido1.hasError('required')">
@@ -37,7 +37,7 @@
         </form>
 
         <form>
-            <mat-form-field class="form">
+            <mat-form-field class="form" appearance="outline">
                 <mat-label>Apellido 2</mat-label>
                 <input matInput [formControl]="apellido2" placeholder="Ex. Mylastname">
                 <mat-error *ngIf="apellido2.hasError('pattern') && !apellido2.hasError('required')">
@@ -53,23 +53,7 @@
         </form>
 
         <form>
-            <mat-form-field class="form">
-                <mat-label>Cédula</mat-label>
-                <input matInput [formControl]="cedula" placeholder="Ex. 111111111">
-                <mat-error *ngIf="cedula.hasError('pattern') && !cedula.hasError('required')">
-                Porfavor ingrese su <strong>cédula</strong> correctamente.
-                </mat-error>
-                <mat-error *ngIf="cedula.hasError('required')">
-                Porfavor ingrese su <strong>cédula</strong>.
-                </mat-error>
-                <mat-error *ngIf="cedula.invalid && !cedula.hasError('pattern') && !cedula.hasError('required')">
-                <strong>Exedio</strong> el tamaño máximo.
-                </mat-error>
-            </mat-form-field>
-        </form>
-
-        <form>
-            <mat-form-field class="form">
+            <mat-form-field class="form" appearance="outline">
                 <mat-label>Teléfono</mat-label>
                 <input matInput [formControl]="telefono" placeholder="Ex. 11111111">
                 <mat-error *ngIf="telefono.hasError('pattern') && !telefono.hasError('required')">
@@ -85,7 +69,7 @@
         </form>
 
         <form>
-            <mat-form-field class="form">
+            <mat-form-field class="form" appearance="outline">
                 <mat-label>Correo electrónico</mat-label>
                 <input matInput [formControl]="correo" placeholder="Ex. example@xd.com">
                 <mat-error *ngIf="correo.hasError('email') && !correo.hasError('required')">
@@ -101,7 +85,7 @@
         </form>
 
         <form>
-            <mat-form-field class="form">
+            <mat-form-field class="form" appearance="outline">
                 <mat-label>Contraseña</mat-label>
                 <input matInput [formControl]="contrasena" placeholder="Ex. 12345678">
                 <mat-error *ngIf="contrasena.invalid && !contrasena.hasError('required')">
@@ -115,7 +99,7 @@
     </div>
     <div>
         <form>
-            <mat-form-field class="form">
+            <mat-form-field class="form" appearance="outline">
                 <mat-label>País procedencía</mat-label>
                 <input matInput [formControl]="provincia" placeholder="Ex. Place">
                 <mat-error *ngIf="provincia.hasError('pattern') && !provincia.hasError('required')">
@@ -131,7 +115,7 @@
         </form>
 
         <form>
-            <mat-form-field class="form">
+            <mat-form-field class="form" appearance="outline">
                 <mat-label>País Residencía</mat-label>
                 <input matInput [formControl]="canton" placeholder="Ex. Place">
                 <mat-error *ngIf="canton.hasError('pattern') && !canton.hasError('required')">
@@ -147,52 +131,38 @@
         </form>
 
         <form>
-            <mat-form-field class="form">
-                <mat-label>Cantidad de hijos</mat-label>
-                <input matInput [formControl]="distrito" placeholder="Ex. Place">
-                <mat-error *ngIf="distrito.hasError('pattern') && !distrito.hasError('required')">
-                Porfavor ingrese su <strong>distrito</strong> correctamente.
+            <mat-form-field class="form" appearance="outline">
+                <mat-label>Hijos</mat-label>
+                <input matInput [formControl]="hijos" placeholder="Ex. Place" type="number">
+                <mat-error *ngIf="hijos.hasError('pattern') && !hijos.hasError('required')">
+                Porfavor ingrese la cantidad de <strong>hijos</strong> correctamente.
                 </mat-error>
-                <mat-error *ngIf="distrito.hasError('required')">
-                Porfavor ingrese su <strong>distrito</strong>.
+                <mat-error *ngIf="hijos.hasError('required')">
+                Porfavor ingrese la cantidad de <strong>hijos</strong>.
                 </mat-error>
-                <mat-error *ngIf="distrito.invalid && !distrito.hasError('pattern') && !distrito.hasError('required')">
-                <strong>Exedio</strong> el tamaño máximo.
-                </mat-error>
-            </mat-form-field>
-        </form>
-
-        <form>
-            <mat-form-field class="form">
-                <mat-label>Barrio</mat-label>
-                <input matInput [formControl]="barrio" placeholder="Ex. Place">
-                <mat-error *ngIf="barrio.hasError('pattern') && !barrio.hasError('required')">
-                Porfavor ingrese su <strong>barrio</strong> correctamente.
-                </mat-error>
-                <mat-error *ngIf="barrio.hasError('required')">
-                Porfavor ingrese su <strong>barrio</strong>.
-                </mat-error>
-                <mat-error *ngIf="barrio.invalid && !barrio.hasError('pattern') && !barrio.hasError('required')">
-                <strong>Exedio</strong> el tamaño máximo.
+                <mat-error *ngIf="hijos.invalid && !hijos.hasError('pattern') && !hijos.hasError('required')">
+                <strong>Exedio</strong> el tamaño máximo de hijos.
                 </mat-error>
             </mat-form-field>
         </form>
 
-        <form>
-            <mat-form-field class="form">
-                <mat-label>Señas</mat-label>
-                <input matInput [formControl]="senas" placeholder="Ex. Place">
-                <mat-error *ngIf="senas.hasError('pattern') && !senas.hasError('required')">
-                Porfavor ingrese su <strong>señas</strong> correctamente.
-                </mat-error>
-                <mat-error *ngIf="senas.hasError('required')">
-                Porfavor ingrese su <strong>señas</strong>.
-                </mat-error>
-                <mat-error *ngIf="senas.invalid && !senas.hasError('pattern') && !senas.hasError('required')">
-                <strong>Exedio</strong> el tamaño máximo.
-                </mat-error>
-            </mat-form-field>
-        </form>
+        <mat-form-field appearance="outline" class="provincias">
+            <mat-select>
+              <mat-option value="">Si</mat-option>
+              <mat-option value="">No</mat-option>
+              <!-- <mat-option value="option">Option</mat-option> -->
+            </mat-select>
+            <mat-label>Discapacidad</mat-label>
+          </mat-form-field>
+
+        <mat-form-field appearance="outline" class="provincias">
+            <mat-select>
+              <mat-option value="">Femenino</mat-option>
+              <mat-option value="">Masculino</mat-option>
+              <!-- <mat-option value="option">Option</mat-option> -->
+            </mat-select>
+            <mat-label>Sexo</mat-label>
+          </mat-form-field>
     </div>
     <button mat-flat-button class="buttonLogin" (click)="enviarInfo()">Aceptar</button>
 </div>

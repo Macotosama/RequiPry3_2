@@ -24,11 +24,6 @@ export class RegisterComponent implements OnInit {
     Validators.required,
     Validators.maxLength(30)
   ]);
-  public cedula = new FormControl('', [
-    Validators.required,
-    Validators.pattern('[0-9 ]*'),
-    Validators.maxLength(9)
-  ]);
   public telefono = new FormControl('', [
     Validators.required,
     Validators.pattern('[0-9 ]*'),
@@ -38,9 +33,10 @@ export class RegisterComponent implements OnInit {
     Validators.required,
     Validators.maxLength(30)
   ]);
-  public distrito = new FormControl('', [
+  public hijos = new FormControl('', [
     Validators.required,
-    Validators.maxLength(30)
+    Validators.maxLength(10),
+    Validators.pattern('[0-9 ]*'),
   ]);
   public canton = new FormControl('', [
     Validators.required,
@@ -73,8 +69,8 @@ export class RegisterComponent implements OnInit {
   }
 
   validEntradas(): void {
-    if (this.nombre.valid && this.apellido1.valid && this.apellido2.valid && this.cedula.valid &&
-      this.telefono.valid && this.correo.valid && this.contrasena.valid && this.provincia.valid && this.distrito.valid && this.canton.valid &&
+    if (this.nombre.valid && this.apellido1.valid && this.apellido2.valid &&
+      this.telefono.valid && this.correo.valid && this.contrasena.valid && this.provincia.valid && this.canton.valid &&
       this.barrio.valid && this.senas.valid) {
         this.enviarInfo();
       } else {
