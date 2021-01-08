@@ -21,6 +21,7 @@ import { LoginComponent } from './interfaz/home/login/login.component';
 import { RegisterComponent } from './interfaz/home/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { InfoHotelComponent } from './interfaz/home/info-hotel/info-hotel.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     HomeComponent,
     ActivadadesComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    InfoHotelComponent
     ],
   imports: [
     BrowserModule,
