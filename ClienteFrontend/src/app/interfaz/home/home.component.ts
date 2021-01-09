@@ -5,6 +5,7 @@ import { map, shareReplay } from 'rxjs/operators';
 import { Router } from "@angular/router";
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { RegisterComponent } from "./register/register.component";
+import { InfoHotelComponent } from './info-hotel/info-hotel.component';
 
 export interface Tile {
   color: string;
@@ -56,7 +57,13 @@ export class HomeComponent implements OnInit {
 
   registrar():void {
     const dialogRef = this.dialog.open(RegisterComponent, {
-    width: '1000px', height: '650px'
-  })
-}
+      width: '1000px', height: '650px'
+    })
+  }
+
+  infoHotel():void {
+    const dialogRef = this.dialog.open(InfoHotelComponent, {
+      width: '1000px', height: '650px'
+    })
+  }
 }

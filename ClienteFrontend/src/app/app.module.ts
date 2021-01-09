@@ -22,6 +22,7 @@ import { RegisterComponent } from './interfaz/home/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { InfoHotelComponent } from './interfaz/home/info-hotel/info-hotel.component';
+import { HabitacionesComponent } from './interfaz/habitaciones/habitaciones.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { InfoHotelComponent } from './interfaz/home/info-hotel/info-hotel.compon
     ActivadadesComponent,
     LoginComponent,
     RegisterComponent,
-    InfoHotelComponent
+    InfoHotelComponent,
+    HabitacionesComponent
     ],
   imports: [
     BrowserModule,
