@@ -1,1 +1,36 @@
-<p>habitaciones works!</p>
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'side' : 'over'"
+        [opened]="(isHandset$ | async) === true">
+      <mat-toolbar>Menu</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['/home']">Inicio</a>
+        <!-- <a mat-list-item [routerLink]="['/aventuras']">Aventuras</a> -->
+        <!-- <a mat-list-item [routerLink]="['/habitaciones']">Habitaciones</a> -->
+        <!-- <a mat-list-item [routerLink]="['/reservaciones']">Reservaciones</a> -->
+        <!-- <a mat-list-item [routerLink]="['/clientes']">Clientes</a> -->
+        <a mat-list-item (click)="cerrarSesion()">Cerrar sesión</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar class="maintoolbar">
+        <menu (click)="drawer.toggle()"><mat-icon class="iconMenu">menu</mat-icon></menu>
+        <span class="titulo" [routerLink]="['/home']">Caribbean Adventure</span>
+        <div class="info1">
+          <a class="telefono">Reservaciones: 88888888</a>
+          <!-- <button mat-flat-button class="Reservaciones">Reservar</button> -->
+        </div>
+        <div class="info2">
+          <a class="direccion" [routerLink]="['/home']">Inicio</a>
+          <a class="direccion" >Transporte</a>
+          <a class="direccion" [routerLink]="['/actividades']">Actividades</a>
+        </div>
+      </mat-toolbar>
+      <!-- Add Content Here -->
+
+      <div class="inputs">
+
+        </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

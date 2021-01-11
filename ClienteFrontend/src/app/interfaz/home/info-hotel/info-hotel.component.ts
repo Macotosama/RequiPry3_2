@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { MatDialogRef } from '@angular/material/dialog';
 
 export interface Tile {
   color: string;
@@ -21,9 +23,15 @@ export class InfoHotelComponent implements OnInit {
     {text: 'Four', cols: 2, rows: 3, color: '#DDBDF1'},
   ];
   
-  constructor() { }
+  constructor(private _router: Router, private _diaglogRef: MatDialogRef<InfoHotelComponent>) { }
 
   ngOnInit(): void {
+  }
+
+  habitacion(hotel: string): void {
+    localStorage.setItem('hotel', hotel);
+    this._diaglogRef.close();
+    this._router.navigate(['/habitaciones']);
   }
 
 }

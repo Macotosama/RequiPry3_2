@@ -5,11 +5,11 @@
         [opened]="(isHandset$ | async) === true">
       <mat-toolbar>Menu</mat-toolbar>
       <mat-nav-list *ngIf="sesion == 's'">
-        <!-- <a mat-list-item [routerLink]="['/hoteles']">Hoteles</a>
-        <a mat-list-item [routerLink]="['/aventuras']">Aventuras</a>
-        <a mat-list-item [routerLink]="['/habitaciones']">Habitaciones</a>
-        <a mat-list-item [routerLink]="['/reservaciones']">Reservaciones</a>
-        <a mat-list-item [routerLink]="['/clientes']">Clientes</a> -->
+        <a mat-list-item [routerLink]="['/home']">Inicio</a>
+        <!-- <a mat-list-item [routerLink]="['/aventuras']">Aventuras</a> -->
+        <!-- <a mat-list-item [routerLink]="['/habitaciones']">Habitaciones</a> -->
+        <!-- <a mat-list-item [routerLink]="['/reservaciones']">Reservaciones</a> -->
+        <!-- <a mat-list-item [routerLink]="['/clientes']">Clientes</a> -->
         <a mat-list-item (click)="cerrarSesion()">Cerrar sesión</a>
       </mat-nav-list>
       <mat-nav-list *ngIf="sesion == 'n'">
@@ -23,10 +23,10 @@
         <span class="titulo" [routerLink]="['/home']">Caribbean Adventure</span>
         <div class="info1">
           <a class="telefono">Reservaciones: 88888888</a>
-          <button mat-flat-button class="Reservaciones">Reservar</button>
+          <!-- <button mat-flat-button class="Reservaciones">Reservar</button> -->
         </div>
         <div class="info2">
-          <a class="direccion" >Hoteles</a>
+          <a class="direccion" [routerLink]="['/home']">Inicio</a>
           <a class="direccion" >Transporte</a>
           <a class="direccion" [routerLink]="['/actividades']">Actividades</a>
         </div>
