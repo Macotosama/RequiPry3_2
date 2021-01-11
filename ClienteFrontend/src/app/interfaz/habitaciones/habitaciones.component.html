@@ -29,8 +29,53 @@
       </mat-toolbar>
       <!-- Add Content Here -->
 
-      <div class="inputs">
-
+        <div class="inputs">
+            <div class="imputNamePorduc">
+                <mat-form-field >
+                    <mat-label>Fecha de entrada</mat-label>
+                    <input matInput [matDatepicker]="dp1" disabled  [(ngModel)]="date">
+                    <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+                    <mat-datepicker #dp1 disabled="false"></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="imputNamePorduc">
+                <mat-form-field >
+                    <mat-label>Fecha de salida</mat-label>
+                    <input matInput [matDatepicker]="dp2" disabled  [(ngModel)]="date2">
+                    <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
+                    <mat-datepicker #dp2 disabled="false"></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="imputNamePorduc">
+                <mat-form-field class="hoteles">
+                    <mat-label>Adultos</mat-label>
+                    <input matInput placeholder="0" [(ngModel)]="adultos">
+                    <mat-icon matSuffix>location_city</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+            </div>
+            <div class="imputNamePorduc">
+                <mat-form-field class="hoteles">
+                    <mat-label>Niños</mat-label>
+                    <input matInput placeholder="0" [(ngModel)]="ninos">
+                    <mat-icon matSuffix>location_city</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+            </div>
         </div>
+        <div class="separador"></div>
+        <div class="infoHoteles">
+            <div class="infoHotel">
+              <mat-grid-list cols="4" rowHeight="100px">
+                <mat-grid-tile
+                    *ngFor="let tile of tiles"
+                    [colspan]="tile.cols"
+                    [rowspan]="tile.rows"
+                    [style.background]="tile.color">
+                  {{tile.text}}
+                </mat-grid-tile>
+              </mat-grid-list>
+            </div>
+          </div>
     </mat-sidenav-content>
   </mat-sidenav-container>

@@ -23,6 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { InfoHotelComponent } from './interfaz/home/info-hotel/info-hotel.component';
 import { HabitacionesComponent } from './interfaz/habitaciones/habitaciones.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { HabitacionesComponent } from './interfaz/habitaciones/habitaciones.comp
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -74,8 +74,46 @@
 
   .inputs{
     color: white;
-    background-color: #6550C5;
-    width: 10em;
-    height: 3em;
-    border-radius: 30px;
+    background-color: #23CF20;
+    width: 100%;
+    height: 10%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    // border-radius: 20px;
 }
+
+.imputNamePorduc {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    height: 65px;
+    align-items: center;
+  }
+
+  .infoHoteles {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .infoHotel {
+    box-shadow: 2px 2px 5px #999;
+    width: 80%;
+    height: 29em;
+  }
+
+  .separador {
+      height: 3em;
+  }
+
+  .hoteles {
+    color: black;
+  }
