@@ -49,23 +49,23 @@
             <div class="imputNamePorduc">
                 <mat-form-field class="hoteles">
                     <mat-label>Adultos</mat-label>
-                    <input matInput placeholder="0" [(ngModel)]="adultos">
-                    <mat-icon matSuffix>location_city</mat-icon>
+                    <input matInput placeholder="0" [(ngModel)]="adultos" type="number">
+                    <mat-icon matSuffix>accessibility</mat-icon>
                     <!-- <mat-hint>Hint</mat-hint> -->
                   </mat-form-field>
             </div>
             <div class="imputNamePorduc">
                 <mat-form-field class="hoteles">
                     <mat-label>Niños</mat-label>
-                    <input matInput placeholder="0" [(ngModel)]="ninos">
-                    <mat-icon matSuffix>location_city</mat-icon>
+                    <input matInput placeholder="0" [(ngModel)]="ninos" type="number">
+                    <mat-icon matSuffix>accessibility</mat-icon>
                     <!-- <mat-hint>Hint</mat-hint> -->
                   </mat-form-field>
             </div>
         </div>
         <div class="separador"></div>
         <div class="infoHoteles">
-            <div class="infoHotel">
+            <div class="infoHotel" (click)="infoHotel()">
               <mat-grid-list cols="4" rowHeight="100px">
                 <mat-grid-tile
                     *ngFor="let tile of tiles"

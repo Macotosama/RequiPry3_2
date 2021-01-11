@@ -3,7 +3,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { Router } from "@angular/router";
-
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { HabitacionComponent } from './habitacion/habitacion.component';
 
 export interface Tile {
   color: string;
@@ -36,7 +37,7 @@ export class HabitacionesComponent implements OnInit {
   public adultos: number;
   public ninos: number;
 
-  constructor(private breakpointObserver: BreakpointObserver, private _router: Router) { }
+  constructor(private breakpointObserver: BreakpointObserver, private _router: Router, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.adultos = 2;
@@ -47,6 +48,12 @@ export class HabitacionesComponent implements OnInit {
   cerrarSesion() {
     localStorage.setItem('sesion', 'n');
     this._router.navigate(['/home']);
+  }
+
+  infoHotel():void {
+    const dialogRef = this.dialog.open(HabitacionComponent, {
+      width: '1000px', height: '650px'
+    })
   }
 
 }
