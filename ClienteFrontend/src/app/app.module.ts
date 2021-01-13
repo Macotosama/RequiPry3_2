@@ -26,6 +26,7 @@ import { HabitacionesComponent } from './interfaz/habitaciones/habitaciones.comp
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HabitacionComponent } from './interfaz/habitaciones/habitacion/habitacion.component';
+import { PagoHabitacionComponent } from './interfaz/pago-habitacion/pago-habitacion.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HabitacionComponent } from './interfaz/habitaciones/habitacion/habitaci
     RegisterComponent,
     InfoHotelComponent,
     HabitacionesComponent,
-    HabitacionComponent
+    HabitacionComponent,
+    PagoHabitacionComponent
     ],
   imports: [
     BrowserModule,
